@@ -1,0 +1,17 @@
+POST http://127.0.0.1:5000/api/scores
+content-type: application/json
+Authorization: verySecretPassword123321
+
+{ 
+    "name": "Test", 
+    "score": 70 
+}
+
+###
+GET http://127.0.0.1:5000/api/scores
+content-type: application/json
+Authorization: verySecretPassword123321
+###
+GET http://127.0.0.1:5000/api/scores?limit=5
+content-type: application/json
+Authorization: verySecretPassword123321

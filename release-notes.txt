@@ -1,0 +1,5 @@
+RELEASE 1
+- Frontend game with high score fetching from backend with limit of 50 scores
+- Backend fetching all scores
+- Backend fetching all scores with limit
+- Backend adding a new score
