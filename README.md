@@ -37,7 +37,9 @@ python hangman.py
 
 API is deployed to cloud and can be accessed using following url:
 
-- TBA
+- https://hangman-backend-99vi.onrender.com/api/scores
+
+API requires Authorization header with value: verySecretPassword123321
 
 # Screencast
 
