@@ -56,4 +56,5 @@ def scores():
         return {"message": "Unauthorized"}, 401
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
