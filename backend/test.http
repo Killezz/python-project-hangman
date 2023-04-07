@@ -4,7 +4,7 @@ Authorization: verySecretPassword123321
 
 { 
     "name": "Test", 
-    "score": 70 
+    "score": 160 
 }
 
 ###
@@ -12,6 +12,26 @@ GET http://127.0.0.1:5000/api/scores
 content-type: application/json
 Authorization: verySecretPassword123321
 ###
+GET http://127.0.0.1:5000/api/scores?sort=asc
+content-type: application/json
+Authorization: verySecretPassword123321
+###
+GET http://127.0.0.1:5000/api/scores?sort=desc&limit=5
+content-type: application/json
+Authorization: verySecretPassword123321
+###
+GET http://127.0.0.1:5000/api/scores?sort=asc&limit=5
+content-type: application/json
+Authorization: verySecretPassword123321
+###
 GET http://127.0.0.1:5000/api/scores?limit=5
+content-type: application/json
+Authorization: verySecretPassword123321
+###
+GET http://127.0.0.1:5000/api/scores/5346622
+content-type: application/json
+Authorization: verySecretPassword123321
+###
+DELETE http://127.0.0.1:5000/api/scores/6792939
 content-type: application/json
 Authorization: verySecretPassword123321

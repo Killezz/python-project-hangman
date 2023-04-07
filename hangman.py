@@ -33,7 +33,7 @@ def main():
             playGame()
         elif choice == 2:
             print("\n\x1B[4mHIGH SCORES - TOP 50\x1B[0m\n")
-            data = requests.get(apiUrl, params={"limit": 50}, headers={"Authorization": apiSecret})
+            data = requests.get(apiUrl, params={"limit": 50, "sort": "asc"}, headers={"Authorization": apiSecret})
             for item in data.json():
                 print(f"{secondsConverter(item['score'])}, {item['name']}")
             input("\nPress Enter to continue...")
