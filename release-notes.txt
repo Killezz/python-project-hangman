@@ -8,3 +8,4 @@ RELEASE 2
 - Backend fetching score based on id
 - Backend deleting score by id
 - Backend fetching all scores with ascending or descending order
+- Added Quit selection to main menu

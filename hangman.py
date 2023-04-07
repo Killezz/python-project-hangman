@@ -25,6 +25,7 @@ def main():
         print(header)
         print("1. Play Game")
         print("2. Display High Scores")
+        print("3. Quit")
         try:
             choice = int(input("\nChoice: "))
         except BaseException:
@@ -37,6 +38,9 @@ def main():
             for item in data.json():
                 print(f"{secondsConverter(item['score'])}, {item['name']}")
             input("\nPress Enter to continue...")
+        elif choice == 3:
+            print("\nQuitting...")
+            break
         else:
             print("Not valid number...")
             sleep(1)
