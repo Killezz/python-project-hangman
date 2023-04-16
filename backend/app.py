@@ -2,12 +2,24 @@ import json
 import os
 import sys
 from random import randint
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 os.chdir(sys.path[0])
 
 app = Flask(__name__)
 apiSecret = "verySecretPassword123321"
+
+
+@app.route("/", methods=["GET"])
+def displayScores():
+    sort = request.args.get("sort")
+    if sort == "asc":
+        scores = sorted(highScores, key=lambda k: k['score'])
+    elif sort == "desc":
+        scores = sorted(highScores, key=lambda k: k['score'], reverse=True)
+    else:
+        return render_template('scores.html', scores=highScores)
+    return render_template('scores.html', scores=scores)
 
 
 @app.route("/api/scores", methods=["GET", "POST"])

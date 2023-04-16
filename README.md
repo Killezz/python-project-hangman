@@ -33,6 +33,13 @@ python hangman.py
 
 ```
 
+# View High Scores
+
+You can view all high scores on:
+
+- https://hangman-backend-99vi.onrender.com/
+
+
 # API implementation
 
 API is deployed to cloud and can be accessed using following url:
