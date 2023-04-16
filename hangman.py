@@ -1,3 +1,6 @@
+"""
+Hangman console game that uses random word list and saves high scores to cloud.
+"""
 import requests
 from os import system, name
 from time import sleep
@@ -20,6 +23,15 @@ header = f"""
 
 
 def main():
+    """
+    Main function that runs the game and displays high score based on user input.
+
+    Args:
+    None
+
+    Returns:
+    None
+    """
     while True:
         clear()
         print(header)
@@ -47,6 +59,15 @@ def main():
 
 
 def secondsConverter(seconds):
+    """
+    Converts seconds into string with minutes and seconds.
+
+    Args:
+    seconds (int): Seconds value in int format.
+
+    Returns:
+    str: For example '1 min 13 sec'
+    """
     min, sec = divmod(seconds, 60)
     if min:
         return f"{min} min {sec} sec"
@@ -55,6 +76,15 @@ def secondsConverter(seconds):
 
 
 def playGame():
+    """
+    Game function that picks 3 random words and if player guesses all 3 right then name is being asked and saved to high scores.
+
+    Args:
+    None
+
+    Returns:
+    None
+    """
     triesLeft = 6
     guessedLetters = []
     correctLetters = []
@@ -113,6 +143,15 @@ def playGame():
 
 
 def gameWin(elapsedSeconds):
+    """
+    Asks name from user and saves it to cloud with high score passed to function.
+
+    Args:
+    elapsedSeconds (int): Seconds that it took to guess all 3 words.
+
+    Returns:
+    None
+    """
     while True:
         clear()
         print(f"You win! It took {elapsedSeconds} seconds.\n")
@@ -127,6 +166,15 @@ def gameWin(elapsedSeconds):
 
 
 def gameOver(word):
+    """
+    Prints current word and asks user if want to try again.
+
+    Args:
+    word (str): Current word that user failed to guess.
+
+    Returns:
+    None
+    """
     while True:
         clear()
         print(hangmanPics[6] + "\n")
@@ -144,6 +192,15 @@ def gameOver(word):
 
 
 def clear():
+    """
+    Clears console.
+
+    Args:
+    None
+
+    Returns:
+    None
+    """
     # for windows
     if name == 'nt':
         _ = system('cls')

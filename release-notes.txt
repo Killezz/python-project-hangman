@@ -14,3 +14,4 @@ RELEASE 3
 - Added High Score table website and new route to app.py
 - Added sorting options to website
 - Added High Score link to README.md
+- Added PDOC documentation
