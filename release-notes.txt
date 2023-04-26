@@ -15,3 +15,7 @@ RELEASE 3
 - Added sorting options to website
 - Added High Score link to README.md
 - Added PDOC documentation
+
+RELEASE 4
+- Added screencast
+- Added screenshots
